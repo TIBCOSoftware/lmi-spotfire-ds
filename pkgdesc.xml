@@ -1,0 +1,9 @@
+﻿<?xml version="1.0"?>
+<PackageDescription xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  SchemaVersion="2.0" Name="LMIDataSourceWeb" Version="1.0.0.1"
+  SeriesId="b2244491-6f39-4a91-948e-f4f85832e519" IntendedClient="Web" IntendedPlatform="WINDOWS">
+
+  <File SourceFile="bin/debug/LmiDataSourceWeb.dll" TargetFilename="LmiDataSourceWeb.dll" Type="Assembly"/>
+  <File SourceFile="bin/debug/module.xml" TargetFilename="module.xml" Type="File" />
+
+</PackageDescription>

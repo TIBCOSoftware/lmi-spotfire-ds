@@ -1,0 +1,13 @@
+﻿<?xml version="1.0"?>
+<!-- Copyright © 2018. TIBCO Software Inc. -->
+<!-- This file is subject to the license terms contained -->
+<!-- in the license file that is distributed with this file. -->
+<PackageDescription xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  SchemaVersion="2.0" Name="LMIDataSource" Version="1.0.0.0"
+  SeriesId="705e88bc-f8c6-42b4-8675-c4b3b3a20430" IntendedClient="any" IntendedPlatform="WINDOWS">
+
+  <File SourceFile="bin/debug/LmiDataSource.dll" TargetFilename="LmiDataSource.dll" Type="Assembly"/>
+  <File SourceFile="bin/debug/module.xml" TargetFilename="module.xml" Type="File" />
+
+
+</PackageDescription>

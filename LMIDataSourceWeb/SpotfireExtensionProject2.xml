@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pbp:PackageBuilderProject SchemaVersion="1.1" Id="b2244491-6f39-4a91-948e-f4f85832e519" Name="LMIDataSourceWeb" Version="1.0.13002.7543" IntendedClient="Web" xmlns:pbp="http://spotfire.tibco.com/PackageBuilderProject.xsd">
+  <pbp:ModuleFile RelativePath="module.xml" UpdateAutomatically="true" />
+  <pbp:BuildFolder RelativePath="bin\Debug" />
+  <pbp:Files>
+    <pbp:File RelativePath="LMIDataSource.dll" Included="false" ExtensionAssembly="true" />
+    <pbp:File RelativePath="LMIDataSource.pdb" Included="false" ExtensionAssembly="false" />
+    <pbp:File RelativePath="LMIDataSourceWeb.pdb" Included="false" ExtensionAssembly="false" />
+    <pbp:File RelativePath="Spotfire.Dxp.Application.dll" Included="false" ExtensionAssembly="true" />
+    <pbp:File RelativePath="Spotfire.Dxp.Application.xml" Included="false" ExtensionAssembly="false" />
+    <pbp:File RelativePath="Spotfire.Dxp.Data.dll" Included="false" ExtensionAssembly="true" />
+    <pbp:File RelativePath="Spotfire.Dxp.Data.Formats.Sbdf.dll" Included="false" ExtensionAssembly="true" />
+    <pbp:File RelativePath="Spotfire.Dxp.Data.Formats.Sbdf.xml" Included="false" ExtensionAssembly="false" />
+    <pbp:File RelativePath="Spotfire.Dxp.Data.Formats.Stdf.dll" Included="false" ExtensionAssembly="true" />
+    <pbp:File RelativePath="Spotfire.Dxp.Data.Formats.Stdf.xml" Included="false" ExtensionAssembly="false" />
+    <pbp:File RelativePath="Spotfire.Dxp.Data.xml" Included="false" ExtensionAssembly="false" />
+    <pbp:File RelativePath="Spotfire.Dxp.Framework.dll" Included="false" ExtensionAssembly="true" />
+    <pbp:File RelativePath="Spotfire.Dxp.Framework.xml" Included="false" ExtensionAssembly="false" />
+    <pbp:File RelativePath="Spotfire.Dxp.Internal.dll" Included="false" ExtensionAssembly="true" />
+    <pbp:File RelativePath="Spotfire.Dxp.Services.dll" Included="false" ExtensionAssembly="true" />
+    <pbp:File RelativePath="Spotfire.Dxp.Web.Controls.dll" Included="false" ExtensionAssembly="true" />
+    <pbp:File RelativePath="Spotfire.Dxp.Web.dll" Included="false" ExtensionAssembly="true" />
+    <pbp:File RelativePath="Spotfire.Dxp.Web.xml" Included="false" ExtensionAssembly="false" />
+    <pbp:File RelativePath="LMIDataSourceWeb.dll" Included="true" ExtensionAssembly="true" />
+    <pbp:File RelativePath="module.xml" Included="true" ExtensionAssembly="false" />
+  </pbp:Files>
+</pbp:PackageBuilderProject>

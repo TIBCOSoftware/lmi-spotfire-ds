@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<module>
+  <id>b2244491-6f39-4a91-948e-f4f85832e519</id>
+  <name>LMIDataSourceWeb</name>
+  <version>1.0.13002.7543</version>
+  <intendedClient>Web</intendedClient>
+  <assemblies>
+    <assembly>
+      <fullname>LMIDataSourceWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4d95002c27fab778</fullname>
+      <codebase>LMIDataSourceWeb.dll</codebase>
+      <compatibility>
+        <min-version>0.0.0.0</min-version>
+        <max-version>#.#.*.*</max-version>
+      </compatibility>
+    </assembly>
+  </assemblies>
+  <extensions>
+    <addIn fullTypeName="LMIDataSourceWeb.CustomAddIn, LMIDataSourceWeb, Version=1.0.0.0, Culture=neutral, PublicKeyToken=4d95002c27fab778" />
+  </extensions>
+</module>

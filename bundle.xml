@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright © 2018. TIBCO Software Inc. -->
+<!-- This file is subject to the license terms contained -->
+<!-- in the license file that is distributed with this file. -->
+<DistributionDescription xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" SchemaVersion="1.0" Id="1a5e6cbb-81db-44db-9002-af091a36ded5" Name="LMIDataSource" Version="1.0.0.0.0">
+
+  <!-- A PackageDescriptionFile element that refers to an already built package (.spk). -->
+  <PackageDescriptionFile Filename="target/LMIDataSource.spk" />
+  <PackageDescriptionFile Filename="target/LMIDataSourceForms.spk" />
+  <PackageDescriptionFile Filename="target/LMIDataSourceWeb.spk" />
+
+</DistributionDescription>
