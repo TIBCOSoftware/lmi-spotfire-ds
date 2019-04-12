@@ -32,15 +32,24 @@ You cannot use bloks.
 
 For ECL you need to type in the whole content of an ECL blok, and add a line on top that gives the rule name using the syntax:
 Rule <rule name>
+  
+You can add a new LMI data source using either:
+(+) Other / "From LogLogic LMI Advanced Search" (this only works for spotfire analyst)
+or
+Tools / LogLogic data sources / Add advanced search data 
+
+For TIBCO Spotfire Web, you need to add another (dummy) data source before being able to add an LMI data source using the tools menu.
 
 ## Building the package
 
 You need Microsoft Visual Studio 2017, the TIBCO Spotfire SDK for the targeted release.
 In build.ps1 script, update the following variables according to the locations of the SDK and the sources.
 
+```
 $env:MSBUILDPATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\"
 $env:SPOTFIREPACKAGEBUILDERCONSOLEPATH="<path to>\TIBCO Spotfire SDK\10.1.0\SDK\Package Builder\"
 $env:BUILDHOME="<path to>\LMIDataSource"
+```
 
 Then launch the build script, the final artifact is LmiDataSource.sdn
 
