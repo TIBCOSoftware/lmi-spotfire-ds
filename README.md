@@ -13,7 +13,7 @@ Results are entirely retrieved from LMI and stored in Spotfire memory, once this
 This works with both the analyst client, and the web client.
 
 ## Pre-requisites
-This has been tested with Spotfire 7.11 and Spotfire X (10.0.0).
+This has been tested with Spotfire 7.11 and Spotfire X (10.0.0 - 10.1.0).
 LMI 6.2.0+ is supported
 
 ## Package installation
