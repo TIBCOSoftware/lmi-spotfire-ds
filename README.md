@@ -1,7 +1,7 @@
-# LMI Data Source for Spotfire®
+# LMI Data Source for TIBCO Spotfire®
 
 ## Description
-The LMI Data Source for Spotfire creates a new data source type that connects to an LMI instance.
+The LMI Data Source for TIBCO Spotfire® creates a new data source type that connects to an LMI instance.
 There are four ways to use this LMI data source:
 - Run a new query (EQL or SQL formated)
 - Retrieve results for an existing query (a tab in the UI)
