@@ -15,7 +15,7 @@ $part4=[int]((($now-$today).totalSeconds)/10)
 $version=$env:VERSION + '.' + $part3 + '.' + $part4
 
 $env:MSBUILDPATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\"
-$env:SPOTFIREPACKAGEBUILDERCONSOLEPATH="C:\Users\lpautet\TIBCO Spotfire SDK\10.1.0\SDK\Package Builder\"
+$env:SPOTFIREPACKAGEBUILDERCONSOLEPATH="C:\Users\lpautet\TIBCO Spotfire SDK\10.2.0\SDK\Package Builder\"
 $env:BUILDHOME="C:\Users\lpautet\source\repos\LMIDataSource"
 
 $env:PATH="$env:SPOTFIREPACKAGEBUILDERCONSOLEPATH;$env:MSBUILDPATH;$env:PATH"

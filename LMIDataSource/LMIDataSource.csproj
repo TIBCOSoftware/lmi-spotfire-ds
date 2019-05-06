@@ -57,17 +57,17 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Spotfire.Dxp.Application, Version=36.0.12922.4185, Culture=neutral, PublicKeyToken=789861576bd64dc5, processorArchitecture=MSIL">
+    <Reference Include="Spotfire.Dxp.Application, Version=37.0.13223.3459, Culture=neutral, PublicKeyToken=789861576bd64dc5, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\TIBCO Spotfire SDK\10.1.0\SDK\Binaries\Spotfire.Dxp.Application.dll</HintPath>
+      <HintPath>..\..\..\..\TIBCO Spotfire SDK\10.2.0\SDK\Binaries\Spotfire.Dxp.Application.dll</HintPath>
     </Reference>
-    <Reference Include="Spotfire.Dxp.Data, Version=36.0.12922.4185, Culture=neutral, PublicKeyToken=789861576bd64dc5, processorArchitecture=MSIL">
+    <Reference Include="Spotfire.Dxp.Data, Version=37.0.13223.3459, Culture=neutral, PublicKeyToken=789861576bd64dc5, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\TIBCO Spotfire SDK\10.1.0\SDK\Binaries\Spotfire.Dxp.Data.dll</HintPath>
+      <HintPath>..\..\..\..\TIBCO Spotfire SDK\10.2.0\SDK\Binaries\Spotfire.Dxp.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Spotfire.Dxp.Framework, Version=36.0.12922.4185, Culture=neutral, PublicKeyToken=789861576bd64dc5, processorArchitecture=MSIL">
+    <Reference Include="Spotfire.Dxp.Framework, Version=37.0.13223.3459, Culture=neutral, PublicKeyToken=789861576bd64dc5, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\TIBCO Spotfire SDK\10.1.0\SDK\Binaries\Spotfire.Dxp.Framework.dll</HintPath>
+      <HintPath>..\..\..\..\TIBCO Spotfire SDK\10.2.0\SDK\Binaries\Spotfire.Dxp.Framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
