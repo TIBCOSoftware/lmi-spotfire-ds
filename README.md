@@ -13,7 +13,7 @@ Results are retrieved from LogLogic LMI and stored in Spotfire® memory. Once th
 This works with both the analyst client and the web client.
 
 ## Pre-requisites
-This code has been tested with TIBCO Spotfire® 7.11 and TIBCO Spotfire® X (10.0.0 - 10.1.0) and
+This code has been tested with TIBCO Spotfire® 7.11 and TIBCO Spotfire® X (10.3.0) and
 TIBCO LogLogic® Log Management Intelligence 6.2.0 and above
 
 ## Package installation
