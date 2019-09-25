@@ -15,7 +15,8 @@ $part4=[int]((($now-$today).totalSeconds)/10)
 $version=$env:VERSION + '.' + $part3 + '.' + $part4
 
 $env:MSBUILDPATH="C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\"
-$env:SPOTFIREPACKAGEBUILDERCONSOLEPATH="C:\Users\lpautet\TIBCO Spotfire SDK\10.2.0\SDK\Package Builder\"
+$env:SPOTFIREVERSION="10.0.0"
+$env:SPOTFIREPACKAGEBUILDERCONSOLEPATH="C:\Users\lpautet\TIBCO Spotfire SDK\$env:SPOTFIREVERSION\SDK\Package Builder\"
 $env:BUILDHOME="C:\Users\lpautet\source\repos\LMIDataSource"
 
 $env:PATH="$env:SPOTFIREPACKAGEBUILDERCONSOLEPATH;$env:MSBUILDPATH;$env:PATH"
@@ -24,14 +25,14 @@ Unblock-File  -Path "$env:SPOTFIREPACKAGEBUILDERCONSOLEPATH\*.exe"
 Unblock-File  -Path "$env:SPOTFIREPACKAGEBUILDERCONSOLEPATH\bin\*.dll"
 #Write-Host $env:PATH
 Write-Host "Building MS VS solution"
-msbuild "$env:BUILDHOME\LmiDataSource.sln"
+msbuild "$env:BUILDHOME\LmiDataSource.sln" /t:Clean,Build 
 Write-Host "All DLL builds completed." 
 Write-Host "Building release $version package files"
 Spotfire.Dxp.PackageBuilder-Console.exe /packageversion:"$version" /pkdesc:"$env:BUILDHOME\LMIDataSource\package.pkdesc" /basefolder:"$env:BUILDHOME\LMIDataSource"  /target:"$env:BUILDHOME\target\LmiDataSource.spk"
 Spotfire.Dxp.PackageBuilder-Console.exe /packageversion:"$version" /pkdesc:"$env:BUILDHOME\LMIDataSourceForms\package.pkdesc" /basefolder:"$env:BUILDHOME\LMIDataSourceForms"  /target:"$env:BUILDHOME\target\LmiDataSourceForms.spk" /refpath:"$env:BUILDHOME\LMIDataSourceForms\bin\debug"
 Spotfire.Dxp.PackageBuilder-Console.exe /packageversion:"$version" /pkdesc:"$env:BUILDHOME\LMIDataSourceWeb\package.pkdesc" /basefolder:"$env:BUILDHOME\LMIDataSourceWeb"  /target:"$env:BUILDHOME\target\LmiDataSourceWeb.spk" /refpath:"$env:BUILDHOME\LMIDataSourceWeb\bin\debug"
 Write-Host "Building release $version distribution file"
-Spotfire.Dxp.PackageBuilder-Console.exe /targettype:Distribution /basefolder:"$env:BUILDHOME" /distdesc:"$env:BUILDHOME\bundle.xml"  /target:"$env:BUILDHOME\target\LmiDataSource.sdn"
+Spotfire.Dxp.PackageBuilder-Console.exe /targettype:Distribution /basefolder:"$env:BUILDHOME" /distdesc:"$env:BUILDHOME\bundle.xml"  /target:"$env:BUILDHOME\target\LmiDataSource-$env:SPOTFIREVERSION.sdn"
 
 
 
