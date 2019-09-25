@@ -103,6 +103,8 @@ namespace LMIDataSource
             // Retrieve the prompt service.
             PromptService promptService = GetService<PromptService>(serviceProvider);
 
+            CredentialsService credentialsService = GetService<CredentialsService>(serviceProvider);
+
             // Check if it allowed to show a UI
             bool isPromptingAllowed = promptService.IsPromptingAllowed;
 
@@ -120,9 +122,16 @@ namespace LMIDataSource
                 {
                     // just ignored at this stage
                 }
+            } else if (isPromptingAllowed)
+            {
+                String[] credentials;
+                bool res = credentialsService.TryGetCredentials<String[]>("LMI::DEFAULT", out credentials);
+                Host = res == false ? "" : credentials[0];
+                UserName = res == false ? "" : credentials[1];
+                UserPass = res == false ? "" : credentials[2];
             }
             // Check if we need to prompt
-            bool needsPrompting = !connectionOk || QueryId == null;
+            bool needsPrompting = !connectionOk;
 
             if (!isPromptingAllowed && needsPrompting)
             {
@@ -142,14 +151,14 @@ namespace LMIDataSource
                     case DataSourcePromptMode.All:
 
                         // Always prompt
-                        promptModels = this.Prompt();
+                        promptModels = this.Prompt(credentialsService);
                         break;
                     case DataSourcePromptMode.RequiredOnly:
 
                         // Prompt only if needed
                         if (needsPrompting)
                         {
-                            promptModels = this.Prompt();
+                            promptModels = this.Prompt(credentialsService);
                         }
                         break;
                     case DataSourcePromptMode.None:
@@ -172,13 +181,15 @@ namespace LMIDataSource
         /// return one can assume that the prompting has been successfully performed.
         /// </summary>
         /// <returns>The prompt models.</returns>
-        private IEnumerable<object> Prompt()
+        private IEnumerable<object> Prompt(CredentialsService credentialsService)
         {
             LmiDataSourcePromptModel promptModel = createPromptModel();
 
             // Return the prompt model to the prompting framework.
             yield return promptModel;
 
+            String[] credentials = { promptModel.Host, promptModel.UserName, promptModel.UserPass };
+            credentialsService.SetCredentials<String[]>("LMI::DEFAULT", credentials);
             // When we get to this point we know that the prompting has been performed, so we assign
             // the properties to the model.
             updateFromPromptReturn(promptModel);
