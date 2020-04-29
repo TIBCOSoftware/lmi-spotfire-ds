@@ -84,7 +84,7 @@ namespace LMIDataSource
         public Boolean cached = false;
 
         [DataMember]
-        public int timeToLive = 600;
+        public int timeToLive = 86400;
     }
 
     [DataContract]
