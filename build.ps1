@@ -27,12 +27,15 @@ Unblock-File  -Path "$env:SPOTFIREPACKAGEBUILDERCONSOLEPATH\bin\*.dll"
 Write-Host "Building MS VS solution"
 msbuild "$env:BUILDHOME\LmiDataSource.sln" /t:Clean,Build 
 Write-Host "All DLL builds completed." 
+Write-Host "Building Spotfire Desktop ZIP files"
+Compress-Archive -LiteralPath "$env:BUILDHOME\LMIDataSource\bin\debug\LMIDataSource.dll", "$env:BUILDHOME\LMIDataSource\bin\debug\module.xml" -DestinationPath "$env:BUILDHOME\target\LMIDataSource_$version.zip"
+Compress-Archive -LiteralPath "$env:BUILDHOME\LMIDataSourceForms\bin\debug\LMIDataSourceForms.dll", "$env:BUILDHOME\LMIDataSourceForms\bin\debug\module.xml" -DestinationPath "$env:BUILDHOME\target\LMIDataSourceForms_$version.zip"
 Write-Host "Building release $version package files"
 Spotfire.Dxp.PackageBuilder-Console.exe /packageversion:"$version" /pkdesc:"$env:BUILDHOME\LMIDataSource\package.pkdesc" /basefolder:"$env:BUILDHOME\LMIDataSource"  /target:"$env:BUILDHOME\target\LmiDataSource.spk"
 Spotfire.Dxp.PackageBuilder-Console.exe /packageversion:"$version" /pkdesc:"$env:BUILDHOME\LMIDataSourceForms\package.pkdesc" /basefolder:"$env:BUILDHOME\LMIDataSourceForms"  /target:"$env:BUILDHOME\target\LmiDataSourceForms.spk" /refpath:"$env:BUILDHOME\LMIDataSourceForms\bin\debug"
 Spotfire.Dxp.PackageBuilder-Console.exe /packageversion:"$version" /pkdesc:"$env:BUILDHOME\LMIDataSourceWeb\package.pkdesc" /basefolder:"$env:BUILDHOME\LMIDataSourceWeb"  /target:"$env:BUILDHOME\target\LmiDataSourceWeb.spk" /refpath:"$env:BUILDHOME\LMIDataSourceWeb\bin\debug"
 Write-Host "Building release $version distribution file"
-Spotfire.Dxp.PackageBuilder-Console.exe /targettype:Distribution /basefolder:"$env:BUILDHOME" /distdesc:"$env:BUILDHOME\bundle.xml"  /target:"$env:BUILDHOME\target\LmiDataSource-$env:SPOTFIREVERSION.sdn"
+Spotfire.Dxp.PackageBuilder-Console.exe /targettype:Distribution /basefolder:"$env:BUILDHOME" /distdesc:"$env:BUILDHOME\bundle.xml"  /target:"$env:BUILDHOME\target\LmiDataSource-$version-sf$env:SPOTFIREVERSION.sdn"
 
 
 
